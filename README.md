@@ -26,6 +26,8 @@ sudo apt-get install -f
 
 sudo apt-get install xrdp -y
 
+sudo apt-get install xfce4
+
 sudo gedit /etc/xrdp/startwm.sh
 
 echo unity>~/.xsession
