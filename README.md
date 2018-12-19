@@ -38,10 +38,10 @@ sudo service xrdp restart
 ```
 # Reconnect to the same session throug xrdp <no longer use>
 
-~~ sudo gedit /etc/xrdp/xrdp.ini
+~~ sudo gedit /etc/xrdp/xrdp.ini ~~
 
-You might be prompted for a password. if this is the case, provide the password and Press enter.   When the file is open, locate the section [xrdp1] and replace the following line
+~~ You might be prompted for a password. if this is the case, provide the password and Press enter.   When the file is open, locate the section [xrdp1] and replace the following line ~~
 
-port=-1
-with the line
-port=ask-1 ~~
+~~ port=-1 ~~
+~~ with the line ~~
+~~ port=ask-1 ~~
