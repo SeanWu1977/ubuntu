@@ -1,8 +1,9 @@
 # ubuntu
 
 # change password policy
+```
 sudo gedit /etc/pam.d/common-password
-
+```
 
 password     [success=1 default=ignore]    pam_unix.so obscure sha512
 
@@ -14,16 +15,18 @@ https://www.server-world.info/en/note?os=Ubuntu_16.04&p=password
 
 
 # XRDP for xfce4
+```
 sudo apt-get install xrdp -y
 
 sudo apt-get install xfce4
-
+```
 ### for single user
+
 echo xfce4-session >~/.xsession 
 
 
 ### for multi xrdp connection
-
+```
 sudo gedit /etc/xrdp/startwm.sh
 
      << after the fi section add the following line>>
@@ -32,7 +35,7 @@ sudo gedit /etc/xrdp/startwm.sh
 
 sudo service xrdp restart
 
-
+```
 # Reconnect to the same session throug xrdp <no longer use>
 
 sudo gedit /etc/xrdp/xrdp.ini
