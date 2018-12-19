@@ -18,11 +18,11 @@ sudo apt-get install xrdp -y
 
 sudo apt-get install xfce4
 
-## for single user
+### for single user
 echo xfce4-session >~/.xsession 
 
 
-## for multi xrdp connection
+### for multi xrdp connection
 
 sudo gedit /etc/xrdp/startwm.sh
 
