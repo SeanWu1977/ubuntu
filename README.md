@@ -18,7 +18,9 @@ sudo apt-get update
 sudo apt-get upgrade
 
 sudo apt-get install tightvncserver
+
 #會有錯，接著執行下面指命即可
+
 sudo apt-get install -f
 
 sudo apt-get install xrdp -y
