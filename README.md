@@ -15,6 +15,7 @@ https://www.server-world.info/en/note?os=Ubuntu_16.04&p=password
 # 原生XRDP
 
 sudo apt-get update
+
 sudo apt-get upgrade
 
 sudo apt-get install tightvncserver
