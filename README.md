@@ -53,7 +53,7 @@ sudo sed -i.bak '/fi/a #xrdp multiple users configuration \n mate-session \n' /e
 ```
 
 
-# jupyterhub
+# jupyterhub on 18.04
 ```
 sudo passwd
 su
@@ -132,6 +132,26 @@ sudo python3 -m pip uninstall pip && sudo apt install python3-pip --reinstall
 pip3 install jupyter
 jupyter notebook
 ```
+
+# jupyterhub on 16.04
+```
+sudo apt-get update
+sudo apt install python3-pip
+v=8
+curl -sL https://deb.nodesource.com/setup_$v.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+sudo apt-get install npm nodejs-legacy
+sudo apt-get purge nodejs npm
+
+sudo npm install -g configurable-http-proxy
+sudo python3 -m pip install jupyterhub 
+sudo python3 -m pip install --upgrade notebook
+jupyterhub
+
+```
+
+
 # Reconnect to the same session throug xrdp <no longer use>
 
 ~~sudo gedit /etc/xrdp/xrdp.ini~~
