@@ -53,6 +53,66 @@ sudo sed -i.bak '/fi/a #xrdp multiple users configuration \n mate-session \n' /e
 ```
 
 
+# jupyterhub
+```
+sudo passwd
+su
+sudo apt-get update
+sudo apt-get install openssh-server -y
+sudo service ssh restart
+sudo apt-get upgrade
+#Download Anaconda
+wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+
+#Install Anaconda
+bash Anaconda3-5.2.0-Linux-x86_64.sh -b
+
+sudo apt install curl
+
+#Install NodeJS
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get -y install nodejs
+sudo apt-get -y install npm
+#Install Java Runtime Environment
+sudo apt-get -y install default-jre
+
+#Install Python 3
+sudo apt-get -y install python3-pip
+
+#Install configurable-http-proxy
+sudo npm install -g configurable-http-proxy
+
+#Install Optimus & Spark
+pip3 install optimuspyspark scikit-learn H2O
+
+#Install JupyterHub
+pip3 install jupyterhub
+
+#Upgrade notebook
+pip3 install --upgrade notebook
+
+sudo mkdir /etc/jupyterhub
+
+jupyterhub --generate-config -f /etc/jupyterhub/jupyterhub_config.py
+
+sudo jupyterhub --config /etc/jupyterhub/jupyterhub_config.py
+
+# create service for jupyterhub
+cd /etc/systemd/system/
+wget https://gist.github.com/Jarrioja/e144697ba17bf0cdec73618c7ac1689c/raw/320e61d614926a15c988873a8b7523ec6e48c926/jupyterhub.service
+
+#Stop Autoboot service
+systemctl stop jupyterhub
+
+#Enable Autoboot service
+systemctl enable jupyterhub
+
+#Start Service
+systemctl start jupyterhub
+
+
+
+```
 # jupyter
 ```
 sudo apt install python3-pip
