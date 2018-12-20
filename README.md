@@ -15,13 +15,13 @@ https://www.server-world.info/en/note?os=Ubuntu_16.04&p=password
 
 # XRDP for 18.04
 ```
-> sudo apt-get install -f
-> sudo apt-get install xrdp -y
-> sudo apt install gnome-tweak-tool
-> sudo service xrdp restart
-> 登入後執行Tweak,
-> Extensions -> open
-> Desktop -> show icons (才會有open termial)
+sudo apt-get install -f
+sudo apt-get install xrdp -y
+sudo apt install gnome-tweak-tool
+sudo service xrdp restart
+登入後執行Tweak,
+Extensions -> open
+Desktop -> show icons (才會有open termial)
 ```
 
 # XRDP for xfce4 16.04
