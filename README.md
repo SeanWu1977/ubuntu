@@ -1,7 +1,7 @@
 # ubuntu
 
 # change password policy
-```
+```Linux Kernel Module
 sudo gedit /etc/pam.d/common-password
 ```
 
