@@ -15,6 +15,8 @@ https://www.server-world.info/en/note?os=Ubuntu_16.04&p=password
 
 # XRDP for 18.04
 ```
+sudo apt-get update
+sudo apt-get upgrade
 sudo apt-get install -f
 sudo apt-get install xrdp -y
 sudo apt install gnome-tweak-tool
@@ -26,25 +28,38 @@ Desktop -> show icons (才會有open termial)
 
 # XRDP for xfce4 16.04
 ```
+sudo apt-get update
+sudo apt-get upgrade
 sudo apt-get install xrdp -y
-
 sudo apt-get install xfce4
 ```
 ### for single user
-
+```
 echo xfce4-session >~/.xsession 
-
-
+```
 ### for multi xrdp connection
 ```
 sudo gedit /etc/xrdp/startwm.sh
-
-     << after the fi section add the following line>>
-     
+     << after the fi section add the following line>>     
       echo xfce4-session >~/.xsession
-
 sudo service xrdp restart
+```
 
+### XRDP for mate 16.04
+```
+sudo apt-get update
+sudo apt-get install mate-core mate-desktop-environment mate-notification-daemon
+sudo sed -i.bak '/fi/a #xrdp multiple users configuration \n mate-session \n' /etc/xrdp/startwm.sh
+```
+
+
+# jupyter
+```
+sudo apt install python3-pip
+pip3 install --upgrade pip
+sudo python3 -m pip uninstall pip && sudo apt install python3-pip --reinstall
+pip3 install jupyter
+jupyter notebook
 ```
 # Reconnect to the same session throug xrdp <no longer use>
 
