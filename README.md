@@ -1,7 +1,7 @@
 # ubuntu
 
 # change password policy
-```ruby
+```
 sudo gedit /etc/pam.d/common-password
 ```
 
@@ -14,7 +14,7 @@ https://www.server-world.info/en/note?os=Ubuntu_16.04&p=password
 
 
 # XRDP for 18.04
-```ruby
+```
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install -f
@@ -27,18 +27,18 @@ Desktop -> show icons (才會有open termial)
 ```
 
 # XRDP for xfce4 16.04
-```ruby
+```
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install xrdp -y
 sudo apt-get install xfce4
 ```
 ### for single user
-```ruby
+```
 echo xfce4-session >~/.xsession 
 ```
 ### for multi xrdp connection
-```ruby
+```
 sudo gedit /etc/xrdp/startwm.sh
      << after the fi section add the following line>>     
       echo xfce4-session >~/.xsession
@@ -46,7 +46,7 @@ sudo service xrdp restart
 ```
 
 ### XRDP for mate 16.04
-```ruby
+```
 sudo apt-get update
 sudo apt-get install mate-core mate-desktop-environment mate-notification-daemon
 sudo sed -i.bak '/fi/a #xrdp multiple users configuration \n mate-session \n' /etc/xrdp/startwm.sh
@@ -54,7 +54,7 @@ sudo sed -i.bak '/fi/a #xrdp multiple users configuration \n mate-session \n' /e
 
 
 # jupyter
-```ruby
+```
 sudo apt install python3-pip
 pip3 install --upgrade pip
 sudo python3 -m pip uninstall pip && sudo apt install python3-pip --reinstall
