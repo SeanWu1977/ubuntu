@@ -119,14 +119,14 @@ pip3 install optimuspyspark scikit-learn H2O
 pip3 install opencv-contrib-python
 pip3 install --upgrade notebook
 
-# disable firewall
-sudo ufw disable
+#reboot os (for environment sync)
+reboot
 
-# run jupyter
-cd ~/.local/bin
-./jupyter notebook --allow-root --ip=0.0.0.0 --no-browser
-# check the terminal for url address 
+# (option) disable firewall 
+# sudo ufw disable
 
+jupyter notebook --allow-root --ip=0.0.0.0 --no-browser
+# check the terminal information for url address 
 
 ```
 
