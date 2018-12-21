@@ -130,7 +130,8 @@ sudo apt install python3-pip
 pip3 install --upgrade pip
 sudo python3 -m pip uninstall pip && sudo apt install python3-pip --reinstall
 pip3 install jupyter
-pip install opencv-contrib-python
+pip3 install optimuspyspark scikit-learn H2O
+pip3 install opencv-contrib-python
 jupyter notebook
 ```
 
