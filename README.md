@@ -126,10 +126,21 @@ systemctl start jupyterhub
 ```
 # jupyter
 ```
+# upgrade system
+sudo apt-get update
+sudo apt-get upgrade
+# for ssh connection
+sudo apt-get install openssh-server -y
+sudo service ssh restart
+# update pip tool
 sudo apt install python3-pip
 pip3 install --upgrade pip
-sudo python3 -m pip uninstall pip && sudo apt install python3-pip --reinstall
 pip3 install jupyter
+
+# 有問題在執行下面指令
+# sudo python3 -m pip uninstall pip && sudo apt install python3-pip --reinstall
+
+# python plugin install
 pip3 install optimuspyspark scikit-learn H2O
 pip3 install opencv-contrib-python
 jupyter notebook
