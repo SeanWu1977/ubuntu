@@ -123,12 +123,9 @@ pip3 install --upgrade notebook
 sudo ufw disable
 
 # run jupyter
-jupyter notebook --allow-root --ip=192.168.174.137 --no-browser
-jupyter notebook --allow-root --ip=0.0.0.0 --no-browser
-
-
-
-
+cd ~/.local/bin
+./jupyter notebook --allow-root --ip=0.0.0.0 --no-browser
+# check the terminal for url address 
 
 
 ```
