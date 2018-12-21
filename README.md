@@ -16,17 +16,23 @@ https://www.server-world.info/en/note?os=Ubuntu_16.04&p=password
 
 # Jupyterhub on 18.04 (multi-users)
 ```
+# change superuser password
 sudo passwd
 su
+
+# system update 
 sudo apt-get update
+sudo apt-get upgrade
+
+# enable ssh connection
 sudo apt-get install openssh-server -y
 sudo service ssh restart
-sudo apt-get upgrade
+
 
 # Download Anaconda
 wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
 
-#Install Anaconda
+# Install Anaconda
 bash Anaconda3-5.2.0-Linux-x86_64.sh -b
 
 sudo apt install curl
@@ -42,7 +48,7 @@ sudo apt-get -y install default-jre
 # Install Python 3
 sudo apt-get -y install python3-pip
 
-#Install configurable-http-proxy
+# Install configurable-http-proxy
 sudo npm install -g configurable-http-proxy
 
 # Install Optimus & Spark
@@ -90,9 +96,11 @@ systemctl start jupyterhub
 # upgrade system
 sudo apt-get update
 sudo apt-get upgrade
+
 # for ssh connection
 sudo apt-get install openssh-server -y
 sudo service ssh restart
+
 # update pip tool
 sudo apt install python3-pip
 pip3 install --upgrade pip
