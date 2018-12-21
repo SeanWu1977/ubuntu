@@ -45,7 +45,7 @@ sudo apt-get -y install npm
 # Install Java Runtime Environment
 sudo apt-get -y install default-jre
 
-# Install Python 3
+# Install Python 3 pip
 sudo apt-get -y install python3-pip
 
 # Install configurable-http-proxy
@@ -93,26 +93,44 @@ systemctl start jupyterhub
 ```
 # Jupyter (single-user)
 ```
-# upgrade system
+# system update 
 sudo apt-get update
 sudo apt-get upgrade
 
-# for ssh connection
+# enable ssh connection
 sudo apt-get install openssh-server -y
 sudo service ssh restart
 
-# update pip tool
-sudo apt install python3-pip
-pip3 install --upgrade pip
-pip3 install jupyter
 
-# 有問題在執行下面指令
-# sudo python3 -m pip uninstall pip && sudo apt install python3-pip --reinstall
+# Download Anaconda
+wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+
+# Install Anaconda
+bash Anaconda3-5.2.0-Linux-x86_64.sh -b
+
+# Install Python 3 pip
+sudo apt-get -y install python3-pip
+
+# Install Java Runtime Environment
+sudo apt-get -y install default-jre
 
 # python plugin install
 pip3 install optimuspyspark scikit-learn H2O
 pip3 install opencv-contrib-python
-jupyter notebook
+pip3 install --upgrade notebook
+
+# disable firewall
+sudo ufw disable
+
+# run jupyter
+jupyter notebook --allow-root --ip=192.168.174.137 --no-browser
+jupyter notebook --allow-root --ip=0.0.0.0 --no-browser
+
+
+
+
+
+
 ```
 
 # Jupyterhub on 16.04 (multi-users)
