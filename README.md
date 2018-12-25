@@ -1,5 +1,18 @@
 # ubuntu
 
+# environment setting
+```
+/etc/environment
+JAVA_HOME="/usr/lib/jvm/open-jdk"
+Use source to load the variables, by running this command:
+source /etc/environment
+Then check the variable, by running this command:
+echo $JAVA_HOME
+
+Usually most linux systems source /etc/environment by default. If your system doesn't do that add the following line to ~/.bashrc 
+source /etc/environment
+```
+
 # change password policy
 ```
 sudo gedit /etc/pam.d/common-password
