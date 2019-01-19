@@ -1,16 +1,18 @@
-===administrator local side & developer user======
-run git bash (windows)
-ssh-keygen -t rsa -C "seanuw@aten.com.tw"
-cd ~/.ssh
+### administrator local side & developer user
 
-#
+```
+   run git bash (windows)
+   ssh-keygen -t rsa -C "seanuw@aten.com.tw"
+   cd ~/.ssh
+
+
 scp id_rsa.pub username@servername:/tmp/id_rsa.user1.pub
+```
 
+### server side
 
-===server side =====
-
-sudo adduser -m git
-sudo passwd git
+>sudo adduser -m git
+>sudo passwd git
 
 sudo mkdir /home/git/repositories
 sudo chown git:git /home/git/repositories
