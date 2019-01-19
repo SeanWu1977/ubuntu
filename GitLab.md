@@ -10,10 +10,13 @@ sudo gitlab-ctl reconfigure
 ```
 
 ```
-    Local                        git lab
- ~/.ssh/id_rsa                id -> SSH Keys -> id_rsa.pub
-                              id belong to group
-                              id belong to git project with access level
+Authorization concept
 
+    Local            |            git lab
+---------------------------------------------------------------------------    
+ ~/.ssh/id_rsa       |         id -> SSH Keys -> id_rsa.pub
+                     |         id belong to group
+                     |         id belong to git project with access level
+---------------------------------------------------------------------------
 
 ```
