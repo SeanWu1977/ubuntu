@@ -1,5 +1,11 @@
 # ubuntu
 
+# user with root authorization
+```
+
+usermod -aG sudo <username>
+```
+
 # environment setting
 ```
 /etc/environment
