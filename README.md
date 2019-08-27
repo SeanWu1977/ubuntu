@@ -2,8 +2,13 @@
 
 # user with root authorization
 ```
-
 usermod -aG sudo <username>
+
+sudo visudo
+
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+<username>  ALL=(ALL:ALL) ALL
 ```
 
 # environment setting
